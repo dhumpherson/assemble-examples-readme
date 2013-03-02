@@ -20,16 +20,15 @@ module.exports = function(grunt) {
         helpers: '<%= pkg.helpers.handlebars %>',
         assets:  'dist'
       },
-      // Build README from templates and YAML or JSON
       readme: {
         options: {
-          layout:   'src/templates/layouts/layout.hbs',
-          partials: 'src/templates/partials/*.hbs',
+          layout:   'src/layouts/readme-layout.hbs',
+          partials: 'docs/*.hbs',
           data:     ['package.json'],
-          ext: ''
+          ext: '.md'
         },
         files: {
-          '.': [ 'src/templates/pages/readme.md.hbs' ]
+          '.': [ 'src/pages/README.hbs' ]
         }
       }
     }
