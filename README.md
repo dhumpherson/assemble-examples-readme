@@ -32,17 +32,12 @@ In ullamcorper turpis ac enim suscipit et rhoncus leo molestie. Mauris interdum 
 ## Examples
 
 ## Release History
- - 2013-03-01    v0.1.1
-  - Adds README example
-  - Uses templates/data and partials for sections.
-
- - 2013-02-28    v0.1.0
-  - First commit.
-
+ * 2013-03-01    v0.1.1    Adds README exampleUses templates/data and partials for sections.
+ * 2013-02-28    v0.1.0    First commit.
 
 
 
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert)
 
-_This file was generated on Sat Mar 02 2013 00:21:26._
+_This file was generated on Sat Mar 02 2013 01:02:57._
