@@ -1,0 +1,36 @@
+{
+  "name": "assemble-example-readme",
+  "description": "Example project for keeping README information up to date using templates and JSON. Inspired by grunt-contrib-internal.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "http://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://assemble.github.com/assemble-readme.git"
+  },
+  "bugs": {
+    "url": "https://assemble.github.com/assemble-readme/issues"
+  },
+  "devDependencies": {
+    "assemble": "0.3.7",
+    "grunt": "0.4.0"
+  },
+  "keywords": [
+    "readme",
+    "assemble",
+    "grunt",
+    "templates",
+    "markdown",
+    "yaml",
+    "json"
+  ],
+
+  "org": "assemble",
+  "branch": "master",
+  "development": false,
+  "helpers": {
+    "handlebars": "node_modules/assemble/lib/engines/handlebars/helpers/defaultHelpers.js"
+  }
+}

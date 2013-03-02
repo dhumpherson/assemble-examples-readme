@@ -1,0 +1,17 @@
+{
+  "repo": "assemble-readme",
+  "description": "Lorem ipsum, it was a success!",
+  "development": false,
+  "username": "assemble",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "http://github.com/jonschlinkert"
+  },
+  "branch": "master",
+  "peerDependencies": {
+    "grunt": "0.4.0"
+  },
+  "overview": "src/templates/partials/readme_overview.md",
+  "options": "src/templates/partials/readme_options.md",
+  "examples": "src/templates/partials/readme_examples.md"
+}
