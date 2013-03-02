@@ -1,36 +1,34 @@
 /*
- * assemble-readme
- * http://assemble.github.com/assemble-readme
+ * assemble-example-readme
+ * http://assemble.github.com/assemble-example-readme
  *
- * Copyright (c) 2013 Assemble
+ * Copyright (c) 2013 Jon Schlinkert
  * MIT License
  */
 
 module.exports = function(grunt) {
-
   'use strict';
-
-  var changelog = grunt.file.readYAML('CHANGELOG');
 
   // Project configuration.
   grunt.initConfig({
     pkg      : grunt.file.readJSON('package.json'),
+    changelog: grunt.file.readYAML('CHANGELOG'),
 
     assemble: {
       options: {
         helpers: '<%= pkg.helpers.handlebars %>',
-        assets:  'dist',
-        changelog: changelog
+        assets:  'dist'
       },
       readme: {
         options: {
-          layout:   'src/layouts/readme-layout.hbs',
-          partials: 'docs/*.hbs',
+          changelog: '<%= changelog %>',
+          layout:    'src/layout.hbs',
+          partials:  'src/docs/*.hbs',
           data:     ['package.json'],
           ext: '.md'
         },
         files: {
-          '.': [ 'src/pages/README.hbs' ]
+          '.': ['src/README.hbs']
         }
       }
     }
@@ -43,6 +41,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'assemble'
   ]);
-
 };
 
