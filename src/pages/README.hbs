@@ -15,7 +15,9 @@ in_development: false
 {{> examples }}
 
 ## Release History
-{{#if changelog}} {{ date }}    {{ version }}    {{#each changes}}{{.}}{{/each}}
+{{#if changelog}}{{#each changelog}} {{ date }}    {{ version }}{{#each changes}}
+  - {{.}}{{/each}}
+{{/each}}
 {{else}}_no changes_{{/if}}
 
 ---
