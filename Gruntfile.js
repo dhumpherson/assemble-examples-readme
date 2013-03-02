@@ -10,15 +10,17 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  var changelog = grunt.file.readYAML('CHANGELOG');
+
   // Project configuration.
   grunt.initConfig({
     pkg      : grunt.file.readJSON('package.json'),
-    changelog: grunt.file.readYAML('CHANGELOG'),
 
     assemble: {
       options: {
         helpers: '<%= pkg.helpers.handlebars %>',
-        assets:  'dist'
+        assets:  'dist',
+        changelog: changelog
       },
       readme: {
         options: {
