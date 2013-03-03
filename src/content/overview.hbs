@@ -2,7 +2,8 @@
 
 This probably isn't practical for small projects, but it can be useful if you manage a number of related projects and you want to synchronize common metadata, author, links and so on.
 
-Here is the entire configuration
+
+
 
 ``` js
 module.exports = function(grunt) {
@@ -16,11 +17,12 @@ module.exports = function(grunt) {
     assemble: {
       readme: {
         options: {
+          helpers:   '<%= pkg.helpers.handlebars %>'
           changelog: '<%= changelog %>',
           layout:    'src/layout.hbs',
           partials:  'src/docs/*.hbs',
-          data:     ['package.json'],
-          ext: '.md'
+          data:      'package.json',
+          ext:       '.md'
         },
         files: {
           '.': ['src/README.hbs']
