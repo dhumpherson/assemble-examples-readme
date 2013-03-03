@@ -1,7 +1,7 @@
 {
   "name": "assemble-example-readme",
-  "description": "Assemble example project. Build a README.md file from templates and YAML or JSON. Inspired by grunt-contrib-internal.",
-  "version": "0.0.1",
+  "description": "Assemble example project, demonstrates how to build a README.md file from templates and YAML or JSON. Inspired by grunt-contrib-internal.",
+  "version": "0.1.2",
   "author": {
     "name": "Jon Schlinkert",
     "url": "http://github.com/jonschlinkert"
