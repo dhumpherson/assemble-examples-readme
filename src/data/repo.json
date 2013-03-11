@@ -1,0 +1,29 @@
+{
+  "name": "example-readme",
+  "description": "<%= package.desription %>",
+  "helpers": "node_modules/assemble/lib/engines/handlebars/helpers/defaultHelpers.js",
+  "version": "<%= package.version %>",
+  "author": {
+    "name": "<%= package.author.name %>",
+    "url": "<%= package..author.url %>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/assemble/assemble-example-readme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/assemble/assemble-example-readme/issues"
+  },
+  "main": "",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "devDependencies": {
+    "assemble": "0.3.9",
+    "grunt": "0.4.0"
+  },
+  "license": "MIT",
+  "branch": "master",
+  "development": false,
+  "contribDoc": false
+}
