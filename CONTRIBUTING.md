@@ -1,1 +1,0 @@
-Please see the [Contributing to Assemble](http://assemble.github.com/assemble/CONTRIBUTING.md) guide for information on contributing to this project.

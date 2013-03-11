@@ -1,6 +1,6 @@
 /*
- * assemble-example-readme
- * http://assemble.github.com/assemble-example-readme
+ * assemble-examples/readme
+ * http://assemble.github.com/assemble-examples/readme
  *
  * Copyright (c) 2013 Jon Schlinkert
  * MIT License
@@ -11,26 +11,53 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg      : grunt.file.readJSON('package.json'),
+    // pkg      : grunt.file.readJSON('package.json'),
     changelog: grunt.file.readYAML('CHANGELOG'),
+    repo:      grunt.file.readJSON('src/data/repo.json'),
 
     assemble: {
       options: {
-        helpers: '<%= pkg.helpers.handlebars %>',
-        assets:  'dist'
+        helpers: '<%= repo.helpers %>'
       },
       readme: {
         options: {
-          changelog: '<%= changelog %>',
-          layout:    'src/layout.hbs',
-          partials:  'src/docs/*.hbs',
-          data:     ['package.json'],
+          // Layouts are optional, so we don't need one, but we'll use one
+          // for the example so you can see how they work.
+          layout: 'src/layouts/layout.hbs',
+          partials: ['src/partials/*.md'],
+          data:     ['src/data/*.json', 'package.json'],
           ext: '.md'
         },
         files: {
-          '.': ['src/README.hbs']
+          '.': ['src/pages/README.hbs']
+        }
+      },
+      changelog: {
+        options: {
+          changelog: '<%= changelog %>',
+          layout: 'src/layouts/layout.hbs',
+          partials: ['src/partials/*.md'],
+          data:     ['src/data/*.json', 'package.json'],
+          ext: '.md'
+        },
+        files: {
+          '.': ['src/pages/README.hbs']
         }
       }
+      // readme_advanced: {
+      //   options: {
+      //     bower: false,
+      //     travis: false,
+      //     changelog: '<%= changelog %>',
+      //     layout: 'src/layouts/layout.hbs',
+      //     partials: ['src/partials/*.md'],
+      //     data:     ['src/data/*.json'],
+      //     ext: '.md'
+      //   },
+      //   files: {
+      //     '.': ['src/pages/README.hbs']
+      //   }
+      // }
     }
   });
 
@@ -39,7 +66,23 @@ module.exports = function(grunt) {
 
   // Default task to be run.
   grunt.registerTask('default', [
-    'assemble'
+    'assemble:readme'
+  ]);
+
+  // Build the basic README
+  grunt.registerTask('readme', [
+    'assemble:readme'
+  ]);
+
+  // Build the README with changelog
+  grunt.registerTask('changelog', [
+    'assemble:changelog'
+  ]);
+
+  // Tests to be run.
+  // Placeholder for Travis CI until proper tests are setup.
+  grunt.registerTask('test', [
+    'default'
   ]);
 };
 
