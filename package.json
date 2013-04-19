@@ -1,7 +1,7 @@
 {
   "name": "assemble-example-readme",
-  "description": "GitHub readme generator. Example of how to use templates and JSON (or YAML) to generate a readme.",
-  "version": "0.2.1",
+  "description": "Use Assemble to generate a readme from basic templates.",
+  "version": "0.2.2",
   "homepage": "https://github.com/assemble/assemble-examples-readme",
   "author": {
     "name": "Jon Schlinkert",

@@ -1,6 +1,6 @@
-# [assemble-example-readme v0.2.1](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-example-readme.png)](https://travis-ci.org/assemble/assemble-example-readme)
+# [assemble-example-readme v0.2.2](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-example-readme.png)](https://travis-ci.org/assemble/assemble-example-readme)
 
-> GitHub readme generator. Example of how to use templates and JSON (or YAML) to generate a readme.
+> Use Assemble to generate a readme from basic templates.
 
 See more [assemble examples][assemble-examples].
 
@@ -120,10 +120,7 @@ description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)**
 
 
 ## Custom Variables
- so Variables are placeholders for data that is defined elsewhere. For example, the `` variable might be used on a page as the placeholder for the actual title. Assemble uses these variables
-
-
-Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. 
+Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. None of these are necessary, they are included for purposes of example. 
 
 
 #### `readme.travis`
@@ -134,12 +131,10 @@ Used in the README title to optionally include the [Travis CI](https://travis-ci
 #### `readme.today`
 type: `Boolean`
 default: `false`
-Formats "today's" date using the dateformat library, included with Grunt.js.  title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
+Formats "today's" date using the `{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
+See an example of using Lodash templates to accomplish the same thing, here: `./src/data/readme.yml`. 
 
-#### `readme.username`
-type: `Boolean`
-default: `false`
-description: Used in the README title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
+
 
 
 
@@ -154,6 +149,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 [Jon Schlinkert](http://github.com/jonschlinkert)
 
 ## Release History
+* 2013-04-19    v0.2.2    Update repo description.
+* 2013-04-18    v0.2.1    Completely refactored. New custom helpers, examples and documentation.
 * 2013-03-02    v0.1.2    Changelog templates now add history to README
 * 2013-03-01    v0.1.1    Adds README example.Uses templates/data and partials for sections.
 * 2013-02-28    v0.1.0    First commit.
@@ -161,14 +158,13 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Roadmap
 * Stardate 45047.2    v1.0.0    Visit the uninhabited El-Adrel system. Overcome social anxiety. 
-* 2013-05-01    v0.2.0    Improve advanced examples. 
-* 2013-04-20    v0.1.0    Improve documentation. 
+* 2013-05-01    v0.3.0    Use section helpers. 
 
 
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated on Fri Apr 19 2013 18:02:04 GMT-0400 (Eastern Daylight Time)._
+_This file was generated on Fri Apr 19 2013 19:58:36 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
