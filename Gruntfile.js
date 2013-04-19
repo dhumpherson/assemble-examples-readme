@@ -1,9 +1,9 @@
 /*
- * assemble-examples/readme
- * http://assemble.github.com/assemble-examples/readme
+ * Assemble, plugin for Grunt.js
+ * https://github.com/assemble/
  *
- * Copyright (c) 2013 Jon Schlinkert
- * MIT License
+ * Copyright (c) 2013 Upstage
+ * Licensed under the MIT license.
  */
 
 module.exports = function(grunt) {
@@ -11,78 +11,29 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    // pkg      : grunt.file.readJSON('package.json'),
-    changelog: grunt.file.readYAML('CHANGELOG'),
-    repo:      grunt.file.readJSON('src/data/repo.json'),
 
+    // The 'assemble' task
     assemble: {
       options: {
-        helpers: '<%= repo.helpers %>'
+        flatten: true,
+        pkg: grunt.file.readJSON('package.json'),
+        partials: 'src/content/*.hbs',
+        data: 'src/data/readme.yml',
+        ext: ''
       },
       readme: {
-        options: {
-          // Layouts are optional, so we don't need one, but we'll use one
-          // for the example so you can see how they work.
-          layout: 'src/layouts/layout.hbs',
-          partials: ['src/partials/*.md'],
-          data:     ['src/data/*.json', 'package.json'],
-          ext: '.md'
-        },
         files: {
-          '.': ['src/pages/README.hbs']
-        }
-      },
-      changelog: {
-        options: {
-          changelog: '<%= changelog %>',
-          layout: 'src/layouts/layout.hbs',
-          partials: ['src/partials/*.md'],
-          data:     ['src/data/*.json', 'package.json'],
-          ext: '.md'
-        },
-        files: {
-          '.': ['src/pages/README.hbs']
+          './': ['src/templates/README.md.hbs']
         }
       }
-      // readme_advanced: {
-      //   options: {
-      //     bower: false,
-      //     travis: false,
-      //     changelog: '<%= changelog %>',
-      //     layout: 'src/layouts/layout.hbs',
-      //     partials: ['src/partials/*.md'],
-      //     data:     ['src/data/*.json'],
-      //     ext: '.md'
-      //   },
-      //   files: {
-      //     '.': ['src/pages/README.hbs']
-      //   }
-      // }
     }
+
   });
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
 
   // Default task to be run.
-  grunt.registerTask('default', [
-    'assemble:readme'
-  ]);
-
-  // Build the basic README
-  grunt.registerTask('readme', [
-    'assemble:readme'
-  ]);
-
-  // Build the README with changelog
-  grunt.registerTask('changelog', [
-    'assemble:changelog'
-  ]);
-
-  // Tests to be run.
-  // Placeholder for Travis CI until proper tests are setup.
-  grunt.registerTask('test', [
-    'default'
-  ]);
+  grunt.registerTask('default', ['assemble']);
 };
 

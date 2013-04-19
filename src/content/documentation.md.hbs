@@ -1,19 +1,3 @@
-# [assemble-example-readme v0.2.1](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-example-readme.png)](https://travis-ci.org/assemble/assemble-example-readme)
-
-> GitHub readme generator. Example of how to use templates and JSON (or YAML) to generate a readme.
-
-See more [assemble examples][assemble-examples].
-
-## Getting started
-* **[Download this project][download]** and unzip it into a new folder.  
-* In the project folder, run `npm install` to install [Assemble][assemble], [Grunt](http://gruntjs.com/) and any other dependencies.
-* Once the dependencies are installed you may run `grunt assemble` to build the example project.
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile][gruntfile], as well as install and use Grunt plugins. 
-
-
-
-## The "assemble" task
 
 ### Overview
 In the project's Gruntfile, the example `assemble` task is pre-loaded with paths and options following standard Grunt.js conventions:
@@ -70,7 +54,7 @@ Learn more about [options.partials][partials]
 Type: `String` (optional)
 Default: `undefined`
 
-Used with the `{{assets}}` variable to resolve the relative path from the _dest file_ to the _assets_ folder.
+Used with the `\{{assets}}` variable to resolve the relative path from the _dest file_ to the _assets_ folder.
 
 
 #### `data`
@@ -106,24 +90,21 @@ More info:
 We also created some _custom helpers_ for this README example to demonstrate how easy it is to extend Assemble and without writing any Assemble-specific code:
 
 #### CHANGELOG
-Usage: `{{changelog}}` or `{{changelog [path/to/file]}}` 
+Usage: `\{{changelog}}` or `\{{changelog [path/to/file]}}` 
 Description: The "changelog" helper retrieves data from the **[CHANGELOG](CHANGELOG)** file in the root of the project, and then converts the changelog entries into a markdown formatted list of entries in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
 #### ROADMAP
-Usage: `{{roadmap}}` or `{{roadmap [path/to/file]}}` 
+Usage: `\{{roadmap}}` or `\{{roadmap [path/to/file]}}` 
 Description: The "roadmap" helper is essentially the same as the "changelog" helper, except it retrieves data from the **[ROADMAP](ROADMAP)** file in the root of the project. This helper also accepts a second optional parameter for specifying a different file than the default.
 
 #### AUTHORS
-Usage: `{{authors}}` or `{{authors [path/to/file]}}` 
+Usage: `\{{authors}}` or `\{{authors [path/to/file]}}` 
 description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)** file in the root of the project, and then converts each authors entry into markdown formatted links in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
 
 
 ## Custom Variables
- so Variables are placeholders for data that is defined elsewhere. For example, the `` variable might be used on a page as the placeholder for the actual title. Assemble uses these variables
-
-
-Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. 
+Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. None of these are necessary, they are included for purposes of example. 
 
 
 #### `readme.travis`
@@ -134,59 +115,10 @@ Used in the README title to optionally include the [Travis CI](https://travis-ci
 #### `readme.today`
 type: `Boolean`
 default: `false`
-Formats "today's" date using the dateformat library, included with Grunt.js.  title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
+Formats "today's" date using the `{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). Lodash templates (underscore) can accomplish this as well, see an example in `./src/data/readme.yml`. 
 
 #### `readme.username`
 type: `Boolean`
 default: `false`
-description: Used in the README title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
 
 
-
-## Contributing
-
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Use [Assemble][assemble] to build and maintain your gh-pages, blog or documentation. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-
-
-## Authors
-[Brian Woodward](http://github.com/doowb)
-[Jon Schlinkert](http://github.com/jonschlinkert)
-
-## Release History
-* 2013-03-02    v0.1.2    Changelog templates now add history to README
-* 2013-03-01    v0.1.1    Adds README example.Uses templates/data and partials for sections.
-* 2013-02-28    v0.1.0    First commit.
-
-
-## Roadmap
-* Stardate 45047.2    v1.0.0    Visit the uninhabited El-Adrel system. Overcome social anxiety. 
-* 2013-05-01    v0.2.0    Improve advanced examples. 
-* 2013-04-20    v0.1.0    Improve documentation. 
-
-
----
-Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
-
-_This file was generated on Fri Apr 19 2013 18:02:04 GMT-0400 (Eastern Daylight Time)._
-
-<!-- assemble links -->
-
-[download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
-[assemble]: https://github.com/assemble/assemble/
-[assemble-examples]: https://github.com/assemble/assemble-examples
-
-[wiki]: https://github.com/assemble/assemble/wiki
-[data]:     https://github.com/assemble/assemble/wiki/data
-[layouts]:  https://github.com/assemble/assemble/wiki/layouts
-[markdown]: https://github.com/assemble/assemble/wiki/markdown
-[options]:  https://github.com/assemble/assemble/wiki/options
-[partials]: https://github.com/assemble/assemble/wiki/partials
-
-
-<!-- grunt links -->
-
-[gruntfile]: http://gruntjs.com/sample-gruntfile
-[configuring tasks]: http://gruntjs.com/configuring-tasks
-[files-object]: http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
-[tasks-and-targets]: http://gruntjs.com/configuring-tasks#task-configuration-and-targets

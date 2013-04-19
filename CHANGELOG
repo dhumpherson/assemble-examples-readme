@@ -1,13 +1,13 @@
-- version: v0.1.2
+v0.1.2:
   date: "2013-03-02"
   changes:
     - Changelog templates now add history to README
-- version: v0.1.1
+v0.1.1:
   date: "2013-03-01"
   changes:
     - Adds README example.
     - Uses templates/data and partials for sections.
-- version: v0.1.0
+v0.1.0:
   date: "2013-02-28"
   changes:
     - First commit.
