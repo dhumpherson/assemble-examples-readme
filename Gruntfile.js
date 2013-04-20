@@ -22,9 +22,8 @@ module.exports = function(grunt) {
         ext: ''
       },
       readme: {
-        files: {
-          './': ['src/templates/README.md.hbs']
-        }
+        src:  'src/templates/README.md.hbs',
+        dest: './'
       }
     }
 

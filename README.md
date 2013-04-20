@@ -20,20 +20,19 @@ In the project's Gruntfile, the example `assemble` task is pre-loaded with paths
 
 ```js
 grunt.initConfig({
-  // The "assemble" task
+
+  // The 'assemble' task
   assemble: {
     options: {
-      flatten: true,
       pkg: grunt.file.readJSON('package.json'),
-      today: '<%= grunt.template.today() %>',
-      partials: 'src/content/*.hbs',
-      data: 'src/data/readme.json',
+      partials: 'src/content/*.hbs', // readme "sections"
+      data: 'src/data/readme.yml', // extra metadata
+      flatten: true,
       ext: ''
     },
     readme: {
-      files: {
-        './': ['src/templates/README.md.hbs']
-      }
+      src:  'src/templates/README.md.hbs', // readme template
+      dest: './'
     }
   }
 })
@@ -163,7 +162,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated with [Assemble][] on Fri Apr 19 2013 20:39:16 GMT-0400 (Eastern Daylight Time)._
+_This file was generated with [Assemble][] on Fri Apr 19 2013 21:22:44 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
