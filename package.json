@@ -19,7 +19,7 @@
     "node": ">=0.8"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt assemble"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -105,15 +105,15 @@ More info:
 
 We also created some _custom helpers_ for this README example to demonstrate how easy it is to extend Assemble and without writing any Assemble-specific code:
 
-#### CHANGELOG
+#### {{CHANGELOG}}
 Usage: `{{changelog}}` or `{{changelog [path/to/file]}}` 
 Description: The "changelog" helper retrieves data from the **[CHANGELOG](CHANGELOG)** file in the root of the project, and then converts the changelog entries into a markdown formatted list of entries in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
-#### ROADMAP
+#### {{ROADMAP}}
 Usage: `{{roadmap}}` or `{{roadmap [path/to/file]}}` 
 Description: The "roadmap" helper is essentially the same as the "changelog" helper, except it retrieves data from the **[ROADMAP](ROADMAP)** file in the root of the project. This helper also accepts a second optional parameter for specifying a different file than the default.
 
-#### AUTHORS
+#### {{AUTHORS}}
 Usage: `{{authors}}` or `{{authors [path/to/file]}}` 
 description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)** file in the root of the project, and then converts each authors entry into markdown formatted links in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
@@ -139,14 +139,13 @@ See an example of using Lodash templates to accomplish the same thing, here: `./
 
 
 ## Contributing
-
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Use [Assemble][assemble] to build and maintain your gh-pages, blog or documentation. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 
 ## Authors
-[Brian Woodward](http://github.com/doowb)
-[Jon Schlinkert](http://github.com/jonschlinkert)
+* [Brian Woodward](http://github.com/doowb)  
+* [Jon Schlinkert](http://github.com/jonschlinkert)  
 
 ## Release History
 * 2013-04-19    v0.2.2    Update repo description.
@@ -157,14 +156,14 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Roadmap
-* Stardate 45047.2    v1.0.0    Visit the uninhabited El-Adrel system. Overcome social anxiety. 
-* 2013-05-01    v0.3.0    Use section helpers. 
+* Stardate 45047.2    v1.0.0    Visit the uninhabited El-Adrel system.Overcome social anxiety.
+* 2013-05-01    v0.3.0    Use section helpers.
 
 
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated on Fri Apr 19 2013 19:58:36 GMT-0400 (Eastern Daylight Time)._
+_This file was generated with [Assemble][] on Fri Apr 19 2013 20:21:06 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
@@ -173,10 +172,10 @@ _This file was generated on Fri Apr 19 2013 19:58:36 GMT-0400 (Eastern Daylight 
 [assemble-examples]: https://github.com/assemble/assemble-examples
 
 [wiki]: https://github.com/assemble/assemble/wiki
-[data]:     https://github.com/assemble/assemble/wiki/data
-[layouts]:  https://github.com/assemble/assemble/wiki/layouts
+[data]: https://github.com/assemble/assemble/wiki/data
+[layouts]: https://github.com/assemble/assemble/wiki/layouts
 [markdown]: https://github.com/assemble/assemble/wiki/markdown
-[options]:  https://github.com/assemble/assemble/wiki/options
+[options]: https://github.com/assemble/assemble/wiki/options
 [partials]: https://github.com/assemble/assemble/wiki/partials
 
 
