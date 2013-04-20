@@ -1,19 +1,4 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
 npm-debug.log
-results
-
-/tmp/
-/temp/
 /node_modules/
 
 *.sublime-project
