@@ -162,7 +162,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated with [Assemble][] on Fri Apr 19 2013 21:22:44 GMT-0400 (Eastern Daylight Time)._
+_This file was generated with [Assemble][] on Fri Apr 19 2013 21:24:38 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
