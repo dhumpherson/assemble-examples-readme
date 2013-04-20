@@ -1,4 +1,4 @@
-# [assemble-example-readme v0.2.2](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-example-readme.png)](https://travis-ci.org/assemble/assemble-example-readme)
+# [assemble-examples-readme v0.2.2](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-examples-readme.png)](https://travis-ci.org/assemble/assemble-examples-readme)
 
 > Use Assemble to generate a readme from basic templates.
 
@@ -163,7 +163,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ---
 Authored by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated with [Assemble][] on Fri Apr 19 2013 20:21:06 GMT-0400 (Eastern Daylight Time)._
+_This file was generated with [Assemble][] on Fri Apr 19 2013 20:39:16 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
