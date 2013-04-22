@@ -6,20 +6,20 @@
  * Licensed under the MIT license.
  */
 
+'use strict';
+
 module.exports = function(grunt) {
-  'use strict';
 
   // Project configuration.
   grunt.initConfig({
 
-    // The 'assemble' task
     assemble: {
       readme: {
         options: {
           flatten: true,
           pkg: grunt.file.readJSON('package.json'),
           partials: 'src/content/*.hbs',
-          data: 'src/data/readme.yml',
+          data: 'src/data/README.yml',
           ext: ''
         },
         src:  'src/templates/README.md.hbs',

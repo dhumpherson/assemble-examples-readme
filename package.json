@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/assemble/assemble-example-readme.git"
+    "url": "https://github.com/assemble/assemble-examples-readme.git"
   },
   "bugs": {
-    "url": "https://github.com/assemble/assemble-example-readme/issues"
+    "url": "https://github.com/assemble/assemble-examples-readme/issues"
   },
   "engines": {
     "node": ">=0.8"
@@ -65,4 +65,3 @@
     "yaml"
   ]
 }
-
