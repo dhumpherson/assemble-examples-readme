@@ -22,7 +22,7 @@ module.exports = function(grunt) {
           data: 'src/data/README.yml',
           ext: ''
         },
-        src:  'src/templates/README.md.hbs',
+        src:  'src/templates/readme.md.hbs',
         dest: './'
       }
     }
