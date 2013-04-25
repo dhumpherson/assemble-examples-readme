@@ -1,4 +1,4 @@
-# [assemble-examples-readme v0.2.2](https://github.com/assemble/assemble-examples-readme)
+# [assemble-examples-readme v0.2.2](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-examples-readme.png)](https://travis-ci.org/assemble/assemble-examples-readme)
 
 > Use Assemble to generate a README from basic templates.
 
@@ -163,7 +163,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated using the [Assemble][] Grunt.js plugin, on Wed Apr 24 2013 21:04:41 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using the [Assemble][] Grunt.js plugin, on Wed Apr 24 2013 21:08:19 GMT-0400 (Eastern Daylight Time)._
 
 <!-- assemble links -->
 
