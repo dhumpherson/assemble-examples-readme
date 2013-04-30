@@ -1,4 +1,4 @@
-# [assemble-examples-readme v0.2.3](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org//assemble-examples-readme.png)](https://travis-ci.org//assemble-examples-readme)
+# [assemble-examples-readme v0.2.2](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-examples-readme.png)](https://travis-ci.org/assemble/assemble-examples-readme)
 
 > Use Assemble to generate a README from basic templates.
 
@@ -37,6 +37,7 @@ grunt.initConfig({
   }
 })
 ```
+
 
 ### Options
 Visit [Assemble's documentation][wiki] to learn about the available task and target options as well as how to configure them. Also, if are not yet familiar with Grunt.js, please consider visiting the Grunt documentation to learn more about [configuring tasks][configuring-tasks]. 
@@ -83,13 +84,13 @@ Learn more about [data][data]
 Type: `String` (optional)
 Default: `.html`
 
-Specify the file extension for destination files.  In this example, we specify `ext: ''` in the `assemble` task options, which equates to "no extension". We do this because assemble only discards the last extension at build time, so by 1) telling assemble not to add another extension to the rendered tempaltes, and 2) by naming our [partials](./src/content/) with the "double" `.md.hbs` extension, we are telling Assemble to process any Handlebars templates inside the files, the result is that:
+Specify the file extension for destination files.  In this example, we specify `ext: ''` in the `assemble` task options, which equates to "no extension". We do this because assemble only discards the last extension at build time, so by 1) telling assemble not to add another extension to the rendered tempaltes, and 2) by naming our template files with the "double" `.md.hbs` extension, we use a sort trick that tells Assemble to treat our markdown files like Handlebars templates. Result:
 
 * We can use markdown for writing our content
 * Any templates embedded in the markdown will be processed
 * The dest files will have the `.md` extension
 
-Note that you _can_ use only the `.md` extension on `src` files, but Assemble will not process embedded templates since the `.md` extension is not "white-listed" for Handlebars templates. 
+Note that you _can_ use the `.md` extension on `src` files, but Assemble will not process embedded templates since the `.md` extension is not "white-listed" for Handlebars templates. 
 
 More info: 
 * Learn more about [ext][options] options
@@ -103,48 +104,34 @@ More info:
 
 We also created some _custom helpers_ for this README example to demonstrate how easy it is to extend Assemble and without writing any Assemble-specific code:
 
-#### {{changelog}}
+#### {{CHANGELOG}}
 Usage: `{{changelog}}` or `{{changelog [path/to/file]}}` 
 Description: The "changelog" helper retrieves data from the **[CHANGELOG](CHANGELOG)** file in the root of the project, and then converts the changelog entries into a markdown formatted list of entries in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
-See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L67-L77)
-
-#### {{roadmap}}
+#### {{ROADMAP}}
 Usage: `{{roadmap}}` or `{{roadmap [path/to/file]}}` 
 Description: The "roadmap" helper is essentially the same as the "changelog" helper, except it retrieves data from the **[ROADMAP](ROADMAP)** file in the root of the project. This helper also accepts a second optional parameter for specifying a different file than the default.
 
-See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L86-L97)
-
-#### {{authors}}
+#### {{AUTHORS}}
 Usage: `{{authors}}` or `{{authors [path/to/file]}}` 
 description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)** file in the root of the project, and then converts each authors entry into markdown formatted links in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
-See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L49-L59)
 
-#### {{now 'yyyy'}}
-Parameters: `String`
-default: `false`
-Returns the current time and/or date using the `{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
-
-An addition paramter can be passed to customize the output of the date and time, string must be formatted according to these tokens: [http://www.ruby-doc.org/core-1.9.3/Time.html#method-i-strftime]()
-``` html
-// Template
-Mon Apr 29 2013 20:52:33 GMT-0400 (Eastern Daylight Time)
-04/29/2013
-
-// Result:
-Thu Jul 26 2012 23:41:02 GMT-0400 (AST)
-07/26/2012
-```
 
 ## Custom Variables
 Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. None of these are necessary, they are included for purposes of example. 
 
-#### `travis`
+
+#### `readme.travis`
 type: `Boolean`
 default: `false`
-Used in the README title. Checks to determine if a `.travis.yml` file is present, if `true` the [Travis CI](https://travis-ci.org/) badge is rendered. 
+Used in the README title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
 
+#### `readme.today`
+type: `Boolean`
+default: `false`
+Formats "today's" date using the `{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
+See an example of using Lodash templates to accomplish the same thing, here: `./src/data/readme.yml`. 
 
 
 
@@ -160,7 +147,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * [Jon Schlinkert](http://github.com/jonschlinkert)  
 
 ## Release History
-* 2013-04-29    v0.2.3    Clean up templates.Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
 * 2013-04-19    v0.2.2    Update repo description.
 * 2013-04-18    v0.2.1    Completely refactored. New custom helpers, examples and documentation.
 * 2013-03-02    v0.1.2    Changelog templates now add history to README
@@ -169,6 +155,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Roadmap
+* Stardate 45047.2    v1.0.0    Visit the uninhabited El-Adrel system.Overcome social anxiety.
 * 2013-05-01    v0.3.0    Use section helpers.
 
 
@@ -176,7 +163,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Mon Apr 29 2013 20:52:33 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using the [Assemble][] Grunt.js plugin, on Wed Apr 24 2013 21:08:19 GMT-0400 (Eastern Daylight Time)._
+
+<!-- assemble links -->
 
 [download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
 [assemble]: https://github.com/assemble/assemble/
@@ -188,6 +177,9 @@ _This file was generated using [Assemble][], a Grunt.js plugin for generating si
 [markdown]: https://github.com/assemble/assemble/wiki/markdown
 [options]: https://github.com/assemble/assemble/wiki/options
 [partials]: https://github.com/assemble/assemble/wiki/partials
+
+
+<!-- grunt links -->
 
 [gruntfile]: http://gruntjs.com/sample-gruntfile
 [configuring tasks]: http://gruntjs.com/configuring-tasks

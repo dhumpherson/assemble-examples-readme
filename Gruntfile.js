@@ -1,11 +1,10 @@
 /*
- * Assemble, a site generator for Grunt.js
+ * Assemble, plugin for Grunt.js
  * https://github.com/assemble/
  *
  * Copyright (c) 2013 Upstage
  * Licensed under the MIT license.
  */
-
 
 'use strict';
 
@@ -20,9 +19,10 @@ module.exports = function(grunt) {
           flatten: true,
           pkg: grunt.file.readJSON('package.json'),
           partials: 'src/content/*.hbs',
+          data: 'src/data/readme.yml',
           ext: ''
         },
-        src:  'src/templates/README.md.hbs',
+        src:  'src/templates/readme.md.hbs',
         dest: './'
       }
     }
