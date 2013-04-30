@@ -1,4 +1,0 @@
----
-username: <%= _.strLeft(pkg.name, "-") %>
-today: <%= grunt.template.today() %>
-travis: true

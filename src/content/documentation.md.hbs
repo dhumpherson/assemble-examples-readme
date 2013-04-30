@@ -22,7 +22,6 @@ grunt.initConfig({
 })
 ```
 
-
 ### Options
 Visit [Assemble's documentation][wiki] to learn about the available task and target options as well as how to configure them. Also, if are not yet familiar with Grunt.js, please consider visiting the Grunt documentation to learn more about [configuring tasks][configuring-tasks]. 
 
@@ -68,13 +67,13 @@ Learn more about [data][data]
 Type: `String` (optional)
 Default: `.html`
 
-Specify the file extension for destination files.  In this example, we specify `ext: ''` in the `assemble` task options, which equates to "no extension". We do this because assemble only discards the last extension at build time, so by 1) telling assemble not to add another extension to the rendered tempaltes, and 2) by naming our template files with the "double" `.md.hbs` extension, we use a sort trick that tells Assemble to treat our markdown files like Handlebars templates. Result:
+Specify the file extension for destination files.  In this example, we specify `ext: ''` in the `assemble` task options, which equates to "no extension". We do this because assemble only discards the last extension at build time, so by 1) telling assemble not to add another extension to the rendered tempaltes, and 2) by naming our [partials](./src/content/) with the "double" `.md.hbs` extension, we are telling Assemble to process any Handlebars templates inside the files, the result is that:
 
 * We can use markdown for writing our content
 * Any templates embedded in the markdown will be processed
 * The dest files will have the `.md` extension
 
-Note that you _can_ use the `.md` extension on `src` files, but Assemble will not process embedded templates since the `.md` extension is not "white-listed" for Handlebars templates. 
+Note that you _can_ use only the `.md` extension on `src` files, but Assemble will not process embedded templates since the `.md` extension is not "white-listed" for Handlebars templates. 
 
 More info: 
 * Learn more about [ext][options] options
@@ -88,34 +87,48 @@ More info:
 
 We also created some _custom helpers_ for this README example to demonstrate how easy it is to extend Assemble and without writing any Assemble-specific code:
 
-#### \{{CHANGELOG}}
+#### \{{changelog}}
 Usage: `\{{changelog}}` or `\{{changelog [path/to/file]}}` 
 Description: The "changelog" helper retrieves data from the **[CHANGELOG](CHANGELOG)** file in the root of the project, and then converts the changelog entries into a markdown formatted list of entries in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
-#### \{{ROADMAP}}
+See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L67-L77)
+
+#### \{{roadmap}}
 Usage: `\{{roadmap}}` or `\{{roadmap [path/to/file]}}` 
 Description: The "roadmap" helper is essentially the same as the "changelog" helper, except it retrieves data from the **[ROADMAP](ROADMAP)** file in the root of the project. This helper also accepts a second optional parameter for specifying a different file than the default.
 
-#### \{{AUTHORS}}
+See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L86-L97)
+
+#### \{{authors}}
 Usage: `\{{authors}}` or `\{{authors [path/to/file]}}` 
 description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)** file in the root of the project, and then converts each authors entry into markdown formatted links in the rendered README.md. Accepts a second optional parameter for specifying a different file than the default.
 
+See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L49-L59)
 
+#### \{{now 'yyyy'}}
+Parameters: `String`
+default: `false`
+Returns the current time and/or date using the `\{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
+
+An addition paramter can be passed to customize the output of the date and time, string must be formatted according to these tokens: [http://www.ruby-doc.org/core-1.9.3/Time.html#method-i-strftime]()
+``` html
+// Template
+{{now}}
+{{now "%m/%d/%Y"}}
+
+// Result:
+Thu Jul 26 2012 23:41:02 GMT-0400 (AST)
+07/26/2012
+```
 
 ## Custom Variables
 Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. None of these are necessary, they are included for purposes of example. 
 
-
-#### `readme.travis`
+#### `travis`
 type: `Boolean`
 default: `false`
-Used in the README title to optionally include the [Travis CI](https://travis-ci.org/) badge. 
+Used in the README title. Checks to determine if a `.travis.yml` file is present, if `true` the [Travis CI](https://travis-ci.org/) badge is rendered. 
 
-#### `readme.today`
-type: `Boolean`
-default: `false`
-Formats "today's" date using the `\{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
-See an example of using Lodash templates to accomplish the same thing, here: `./src/data/readme.yml`. 
 
 
 

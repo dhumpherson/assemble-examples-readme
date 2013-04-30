@@ -1,7 +1,7 @@
 {
   "name": "assemble-examples-readme",
   "description": "Use Assemble to generate a README from basic templates.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/assemble/assemble-examples-readme",
   "author": {
     "name": "Jon Schlinkert",

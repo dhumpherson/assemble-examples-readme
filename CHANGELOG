@@ -1,3 +1,9 @@
+v0.2.3:
+  date: "2013-04-29"
+  changes:
+    - Clean up templates. 
+    - Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.  
+    - Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
 v0.2.2:
   date: "2013-04-19"
   changes:
