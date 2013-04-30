@@ -121,7 +121,7 @@ description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)**
 
 See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L49-L59)
 
-#### {{now 'yyyy'}}
+#### {{now}}
 Parameters: `String`
 default: `false`
 Returns the current time and/or date using the `{{now}}` helper from [helper-lib](https://github.com/assemble/helper-lib/). 
@@ -129,8 +129,8 @@ Returns the current time and/or date using the `{{now}}` helper from [helper-lib
 An addition paramter can be passed to customize the output of the date and time, string must be formatted according to these tokens: [http://www.ruby-doc.org/core-1.9.3/Time.html#method-i-strftime]()
 ``` html
 // Template
-Mon Apr 29 2013 20:55:21 GMT-0400 (Eastern Daylight Time)
-04/29/2013
+{{now}}
+{{now "%m/%d/%Y"}}
 
 // Result:
 Thu Jul 26 2012 23:41:02 GMT-0400 (AST)
@@ -176,7 +176,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Mon Apr 29 2013 20:55:21 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Mon Apr 29 2013 20:57:40 GMT-0400 (Eastern Daylight Time)._
 
 [download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
 [assemble]: https://github.com/assemble/assemble/
