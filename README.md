@@ -159,7 +159,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * [Brian Woodward](http://github.com/doowb)  
 * [Jon Schlinkert](http://github.com/jonschlinkert)  
 
-## Release History
+## Release history
 * 2013-04-29    v0.2.3    Clean up templates.Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
 * 2013-04-19    v0.2.2    Update repo description.
 * 2013-04-18    v0.2.1    Completely refactored. New custom helpers, examples and documentation.
@@ -176,7 +176,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Mon Apr 29 2013 20:57:40 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Thu May 02 2013 07:39:35 GMT-0400 (Eastern Daylight Time)._
 
 [download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
 [assemble]: https://github.com/assemble/assemble/
