@@ -17,8 +17,8 @@ module.exports = function(grunt) {
       readme: {
         options: {
           flatten: true,
-          pkg: grunt.file.readJSON('package.json'),
           partials: 'src/content/*.hbs',
+          data: 'package.json',
           ext: ''
         },
         src:  'src/templates/README.md.hbs',

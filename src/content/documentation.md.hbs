@@ -8,10 +8,9 @@ grunt.initConfig({
   // The 'assemble' task
   assemble: {
     options: {
-      pkg: grunt.file.readJSON('package.json'),
-      partials: 'src/content/*.hbs', // readme "sections"
-      data: 'src/data/readme.yml', // extra metadata
       flatten: true,
+      partials: 'src/content/*.hbs',
+      data: 'package.json', // metadata
       ext: ''
     },
     readme: {

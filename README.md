@@ -24,10 +24,9 @@ grunt.initConfig({
   // The 'assemble' task
   assemble: {
     options: {
-      pkg: grunt.file.readJSON('package.json'),
-      partials: 'src/content/*.hbs', // readme "sections"
-      data: 'src/data/readme.yml', // extra metadata
       flatten: true,
+      partials: 'src/content/*.hbs',
+      data: 'package.json', // metadata
       ext: ''
     },
     readme: {
@@ -160,23 +159,23 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * [Jon Schlinkert](http://github.com/jonschlinkert)  
 
 ## Release history
-* 2013-04-29    v0.2.3    Clean up templates.Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
-* 2013-04-19    v0.2.2    Update repo description.
-* 2013-04-18    v0.2.1    Completely refactored. New custom helpers, examples and documentation.
-* 2013-03-02    v0.1.2    Changelog templates now add history to README
-* 2013-03-01    v0.1.1    Adds README example.Uses templates/data and partials for sections.
-* 2013-02-28    v0.1.0    First commit.
+* 2013-04-29			v0.2.3			Clean up templates.Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
+* 2013-04-19			v0.2.2			Update repo description.
+* 2013-04-18			v0.2.1			Completely refactored. New custom helpers, examples and documentation.
+* 2013-03-02			v0.1.2			Changelog templates now add history to README
+* 2013-03-01			v0.1.1			Adds README example.Uses templates/data and partials for sections.
+* 2013-02-28			v0.1.0			First commit.
 
 
 ## Roadmap
-* 2013-05-01    v0.3.0    Use section helpers.
+* 2013-05-01			v0.3.0			Use section helpers.
 
 
 ---
 
 Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
 
-_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Thu May 02 2013 07:43:09 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Thu May 02 2013 07:55:54 GMT-0400 (Eastern Daylight Time)._
 
 [download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
 [assemble]: https://github.com/assemble/assemble/
