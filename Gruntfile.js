@@ -17,11 +17,11 @@ module.exports = function(grunt) {
       readme: {
         options: {
           flatten: true,
-          partials: 'src/content/*.hbs',
-          data: 'package.json',
+          partials: './src/content/*.hbs',
+          data: './package.json',
           ext: ''
         },
-        src:  'src/templates/README.md.hbs',
+        src:  './src/templates/README.md.hbs',
         dest: './'
       }
     }

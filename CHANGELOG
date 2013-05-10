@@ -1,3 +1,7 @@
+v0.2.4:
+  date: "2013-05-09"
+  changes:
+    - Add Travis CI helper and add description to README
 v0.2.3:
   date: "2013-04-29"
   changes:

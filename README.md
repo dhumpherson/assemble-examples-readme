@@ -1,4 +1,4 @@
-# [assemble-examples-readme v0.2.3](https://github.com/assemble/assemble-examples-readme) [![Build Status](https://travis-ci.org/assemble/assemble-examples-readme.png)](https://travis-ci.org/assemble/assemble-examples-readme)
+# [assemble-examples-readme v0.2.4](https://github.com/assemble/assemble-examples-readme)[![Build Status](https://travis-ci.org/assemble/assemble-examples-readme.png)](https://travis-ci.org/assemble/assemble-examples-readme)
 
 > Use Assemble to generate a README from basic templates.
 
@@ -21,20 +21,20 @@ In the project's Gruntfile, the example `assemble` task is pre-loaded with paths
 ```js
 grunt.initConfig({
 
-  // The 'assemble' task
+  // The "assemble" task.
   assemble: {
-    options: {
-      flatten: true,
-      partials: 'src/content/*.hbs',
-      data: 'package.json', // metadata
-      ext: ''
-    },
     readme: {
-      src:  'src/templates/README.md.hbs', // readme template
+      options: {
+        flatten: true,
+        partials: 'src/content/*.hbs',
+        data: 'package.json',
+        ext: ''
+      },
+      src:  'src/templates/README.md.hbs',
       dest: './'
     }
   }
-})
+});
 ```
 
 ### Options
@@ -120,6 +120,11 @@ description: The "authors" helper retrieves data from the **[AUTHORS](AUTHORS)**
 
 See this helper on [helper-lib](https://github.com/assemble/helper-lib/blob/master/lib/helpers/helpers-markdown.js#L49-L59)
 
+#### {{travis}}
+type: `Boolean`
+default: `false`
+Used in the README title. Checks to determine if a `.travis.yml` file is present, if `true` then a main title with version and [Travis CI](https://travis-ci.org/) badge is rendered. 
+
 #### {{now}}
 Parameters: `String`
 default: `false`
@@ -129,21 +134,10 @@ An addition paramter can be passed to customize the output of the date and time,
 ``` html
 // Template
 {{now}}
-{{now "%m/%d/%Y"}}
 
 // Result:
 Thu Jul 26 2012 23:41:02 GMT-0400 (AST)
-07/26/2012
 ```
-
-## Custom Variables
-Values for the following variables are defined in the [readme.yml](./src/data/readme.yml) file. None of these are necessary, they are included for purposes of example. 
-
-#### `travis`
-type: `Boolean`
-default: `false`
-Used in the README title. Checks to determine if a `.travis.yml` file is present, if `true` the [Travis CI](https://travis-ci.org/) badge is rendered. 
-
 
 
 
@@ -159,6 +153,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * [Jon Schlinkert](http://github.com/jonschlinkert)  
 
 ## Release history
+* 2013-05-09			v0.2.4			Add Travis CI helper and add description to README
 * 2013-04-29			v0.2.3			Clean up templates.Corrected references to changelog, authors and roadmap to all be lowercase to work with helpers.Removed README.yml from options.data in Gruntfile, since all data is sourced from package.json anyway.
 * 2013-04-19			v0.2.2			Update repo description.
 * 2013-04-18			v0.2.1			Completely refactored. New custom helpers, examples and documentation.
@@ -173,9 +168,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ---
 
-Project by [Jon Schlinkert](http://github.com/jonschlinkert/)
+Project by [Assemble](http://github.com/assemble/assemble)
 
-_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Thu May 02 2013 07:55:54 GMT-0400 (Eastern Daylight Time)._
+_This file was generated using [Assemble][], a Grunt.js plugin for generating sites, on Thu May 09 2013 21:44:46 GMT-0400 (Eastern Daylight Time)._
 
 [download]: https://github.com/assemble/assemble-examples-basic/archive/master.zip
 [assemble]: https://github.com/assemble/assemble/

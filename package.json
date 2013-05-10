@@ -1,12 +1,22 @@
 {
   "name": "assemble-examples-readme",
   "description": "Use Assemble to generate a README from basic templates.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "homepage": "https://github.com/assemble/assemble-examples-readme",
   "author": {
-    "name": "Jon Schlinkert",
-    "url": "http://github.com/jonschlinkert/"
+    "name": "Assemble",
+    "url": "http://github.com/assemble/assemble"
   },
+  "contributors": [
+    {
+      "name": "Jon Schlinkert",
+      "url": "https://github.com/jonschlinkert"
+    },
+    {
+      "name": "Brian Woodward",
+      "url": "https://github.com/doowb"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/assemble/assemble-examples-readme.git"
@@ -22,7 +32,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "assemble": "~0.3.73"
+    "assemble": "0.3.x"
   },
   "licenses": [
     {
